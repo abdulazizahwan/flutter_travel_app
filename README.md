@@ -13,7 +13,7 @@ A new Flutter Travel application. Designed by Icha Mawaddah Febriyana, Code with
 
 - flutter_svg: [get package](https://pub.dev/packages/flutter_svg)
 - google_fonts: [get package](https://pub.dev/packages/google_fonts)
-- smooth_page_indicator: (https://pub.dev/packages/smooth_page_indicator)
+- smooth_page_indicator: [get package](https://pub.dev/packages/smooth_page_indicator)
 
 **Fonts**
 
