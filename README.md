@@ -4,7 +4,8 @@ A new Flutter Travel application. Designed by Icha Mawaddah Febriyana, Code with
 
 # Travel App UI Design - Flutter UI Best Practice
 
-## [Watch it on YouTube](https://youtu.be/1qybIXHdvVU)
+## [Watch it on YouTube - Part 1](https://youtu.be/1qybIXHdvVU)
+## [Watch it on YouTube - Part 2](https://youtu.be/f42AvT6ZIu4)
 
 **Project Starter Code**
 - flutter_book_app_starter.zip [get file](https://gum.co/WMkFC)
@@ -14,6 +15,8 @@ A new Flutter Travel application. Designed by Icha Mawaddah Febriyana, Code with
 - flutter_svg: [get package](https://pub.dev/packages/flutter_svg)
 - google_fonts: [get package](https://pub.dev/packages/google_fonts)
 - smooth_page_indicator: [get package](https://pub.dev/packages/smooth_page_indicator)
+- cached_network_image: [get package](https://pub.dev/packages/cached_network_image)
+
 
 **Fonts**
 
