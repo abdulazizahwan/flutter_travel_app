@@ -1,4 +1,3 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -47,7 +46,7 @@ class SelectedPlaceScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.of(context).pop();
                       },
                       child: Container(
@@ -58,19 +57,11 @@ class SelectedPlaceScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(9.6),
                           color: Color(0x10000000),
                         ),
-                        child: SvgPicture.asset('assets/svg/icon_left_arrow.svg'),
+                        child:
+                            SvgPicture.asset('assets/svg/icon_left_arrow.svg'),
                       ),
                     ),
-                    Container(
-                      height: 57.6,
-                      width: 57.6,
-                      padding: EdgeInsets.all(18),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.6),
-                        color: Color(0x10000000),
-                      ),
-                      child: SvgPicture.asset('assets/svg/icon_heart_fill.svg'),
-                    )
+                    FavoriteButton()
                   ],
                 ),
               ),
@@ -80,8 +71,10 @@ class SelectedPlaceScreen extends StatelessWidget {
             Align(
               alignment: Alignment.bottomLeft,
               child: Container(
-                height: 346.8,
-                margin: EdgeInsets.only(left: 28.8, bottom: 48, right: 28.8),
+                constraints: BoxConstraints(
+                    minHeight: 347,
+                    maxHeight: MediaQuery.of(context).size.height * 0.45),
+                padding: EdgeInsets.only(left: 28.8, bottom: 48, right: 28.8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -101,8 +94,9 @@ class SelectedPlaceScreen extends StatelessWidget {
                         recommendedModel.tagLine,
                         maxLines: 2,
                         style: GoogleFonts.playfairDisplay(
-                            fontSize: 42.6, fontWeight: FontWeight.w700,
-                        color: Colors.white),
+                            fontSize: 42.6,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white),
                       ),
                     ),
                     Padding(
@@ -170,6 +164,40 @@ class SelectedPlaceScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class FavoriteButton extends StatefulWidget {
+  @override
+  _FavoriteButtonState createState() => _FavoriteButtonState();
+}
+
+class _FavoriteButtonState extends State<FavoriteButton> {
+  bool isFavorite = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        height: 57.6,
+        width: 57.6,
+        padding: EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(9.6),
+          color: Color(0x10000000),
+        ),
+        child: SvgPicture.asset(isFavorite
+            ? 'assets/svg/icon_heart_fill_red.svg'
+            : 'assets/svg/icon_heart_fill.svg'),
+      ),
+      onTap: () {
+        print('Sebelum klik tombol => $isFavorite');
+        setState(() {
+          isFavorite = !isFavorite;
+          print('Setelah klik tombol => $isFavorite');
+        });
+      },
     );
   }
 }

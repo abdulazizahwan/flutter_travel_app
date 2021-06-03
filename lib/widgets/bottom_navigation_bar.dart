@@ -23,7 +23,7 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 86.4,
+      // height: 86.4,
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
             color: Colors.grey.withOpacity(0.3),
@@ -37,32 +37,32 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
             icon: _selectedIndex == 0
                 ? new SvgPicture.asset('assets/svg/icon_home_colored.svg')
                 : new SvgPicture.asset('assets/svg/icon_home.svg'),
-            title: Text('Home'),
+            label: 'Home'
           ),
           BottomNavigationBarItem(
             icon: _selectedIndex == 1
                 ? new SvgPicture.asset('assets/svg/icon_heart_colored.svg')
                 : new SvgPicture.asset('assets/svg/icon_heart.svg'),
-            title: Text('Heart'),
+            label: 'Heart',
           ),
           BottomNavigationBarItem(
             icon: _selectedIndex == 2
                 ? new SvgPicture.asset('assets/svg/icon_plus_colored.svg')
                 : new SvgPicture.asset('assets/svg/icon_plus.svg'),
-            title: Text('Plus'),
+            label: 'Plus',
           ),
           BottomNavigationBarItem(
             icon: _selectedIndex == 3
                 ? new SvgPicture.asset(
                     'assets/svg/icon_notification_colored.svg')
                 : new SvgPicture.asset('assets/svg/icon_notification.svg'),
-            title: Text('Notification'),
+            label: 'Notification',
           ),
           BottomNavigationBarItem(
             icon: _selectedIndex == 4
                 ? new SvgPicture.asset('assets/svg/icon_user_colored.svg')
                 : new SvgPicture.asset('assets/svg/icon_user.svg'),
-            title: Text('User'),
+            label: 'User',
           )
         ],
         currentIndex: _selectedIndex,

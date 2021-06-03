@@ -17,6 +17,21 @@ List<RecommendedModel> recommendations = recommendationsData
 
 var recommendationsData = [
   {
+    "name": "Semarang, Indonesia",
+    "tagLine": "Semarang Variety of Culture",
+    "image": "https://images.unsplash.com/photo-1607355739828-0bf365440db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1444&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1607355739828-0bf365440db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1444&q=80",
+      "https://images.unsplash.com/photo-1577791465485-b80039b4d69a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+      "https://images.unsplash.com/photo-1577404699057-04440b45986f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80",
+      "https://images.unsplash.com/photo-1549973890-38d08b229439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=642&q=80",
+      "https://images.unsplash.com/photo-1622263096760-5c79f72884af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+    ],
+    "description":
+    "Semarang City is the capital city of Central Java Province, Indonesia as well as the fifth largest metropolitan city in Indonesia",
+    "price": 100
+  },
+  {
     "name": "Raja Ampat, Indonesia",
     "tagLine": "Raja Ampat The Hidden Place",
     "image":
@@ -66,7 +81,7 @@ var recommendationsData = [
   },
   {
     "name": "Wiang Kum Kam, Thailand",
-    "tagLine": "Amazing Thailand",
+    "tagLine": "The Amazing Thailand",
     "image":
     "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     "images": [
@@ -82,7 +97,7 @@ var recommendationsData = [
   },
   {
     "name": "Garden The Bay, Singapore",
-    "tagLine": "The Singapore Tourism Board",
+    "tagLine": "Singapore Tourism Board",
     "image":
     "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
     "images": [

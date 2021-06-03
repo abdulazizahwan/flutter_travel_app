@@ -11,12 +11,8 @@ import 'package:fluttertravelapp/widgets/custom_tab_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+class HomeScreen extends StatelessWidget {
 
-class _HomeScreenState extends State<HomeScreen> {
   // Page Controller
   final _pageController = PageController(viewportFraction: 0.877);
 
@@ -139,7 +135,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.circular(9.6),
                           image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: CachedNetworkImageProvider(recommendations[index].image),
+                            image: CachedNetworkImageProvider(
+                                recommendations[index].image),
                           ),
                         ),
                         child: Stack(
@@ -284,7 +281,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.circular(9.6),
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: CachedNetworkImageProvider(beaches[index].image),
+                          image:
+                              CachedNetworkImageProvider(beaches[index].image),
                         ),
                       ),
                     );
