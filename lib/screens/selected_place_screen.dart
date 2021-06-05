@@ -19,7 +19,7 @@ class SelectedPlaceScreen extends StatelessWidget {
       body: Container(
         child: Stack(
           children: <Widget>[
-            // PageView for Image
+            /// PageView for Image
             PageView(
               controller: _pageController,
               scrollDirection: Axis.horizontal,
@@ -37,7 +37,7 @@ class SelectedPlaceScreen extends StatelessWidget {
               ),
             ),
 
-            // Custom Button
+            /// Custom Button
             SafeArea(
               child: Container(
                 height: 57.6,
@@ -67,13 +67,13 @@ class SelectedPlaceScreen extends StatelessWidget {
               ),
             ),
 
-            // Content
+            /// Content
             Align(
               alignment: Alignment.bottomLeft,
               child: Container(
                 constraints: BoxConstraints(
-                    minHeight: 347,
-                    maxHeight: MediaQuery.of(context).size.height * 0.45),
+                  minHeight: MediaQuery.of(context).size.height * 0.4,
+                    maxHeight: MediaQuery.of(context).size.height * 0.5),
                 padding: EdgeInsets.only(left: 28.8, bottom: 48, right: 28.8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,8 +93,9 @@ class SelectedPlaceScreen extends StatelessWidget {
                       child: Text(
                         recommendedModel.tagLine,
                         maxLines: 2,
+                        overflow: TextOverflow.fade,
                         style: GoogleFonts.playfairDisplay(
-                            fontSize: 42.6,
+                            fontSize: 28,
                             fontWeight: FontWeight.w700,
                             color: Colors.white),
                       ),
@@ -104,8 +105,9 @@ class SelectedPlaceScreen extends StatelessWidget {
                       child: Text(
                         recommendedModel.description,
                         maxLines: 3,
+                        overflow: TextOverflow.fade,
                         style: GoogleFonts.lato(
-                            fontSize: 19.2,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: Colors.white),
                       ),
@@ -116,25 +118,29 @@ class SelectedPlaceScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'Start from',
-                              style: GoogleFonts.lato(
-                                  fontSize: 16.8,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white),
-                            ),
-                            Text(
-                              '\$ ${recommendedModel.price.toString()} / person',
-                              style: GoogleFonts.lato(
-                                  fontSize: 21.6,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.white),
-                            )
-                          ],
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              FittedBox(
+                                child: Text(
+                                  'Start from',
+                                  style: GoogleFonts.lato(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white),
+                                ),
+                              ),
+                              FittedBox(
+                                child: Text(
+                                  '\$ ${recommendedModel.price.toString()} / person',
+                                  style: GoogleFonts.lato(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.white),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Container(
                           height: 62.4,
@@ -143,14 +149,15 @@ class SelectedPlaceScreen extends StatelessWidget {
                               color: Colors.white),
                           child: Align(
                             alignment: Alignment.center,
-                            child: Padding(
+                            child: Container(
                               padding: EdgeInsets.only(left: 28.8, right: 28.8),
-                              child: Text(
-                                'Explore Now >>',
-                                style: GoogleFonts.lato(
-                                    fontSize: 19.2,
-                                    fontWeight: FontWeight.w700,
-                                    color: Colors.black),
+                              child: FittedBox(
+                                child: Text(
+                                  'Explore Now >>',
+                                  style: GoogleFonts.lato(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black),
+                                ),
                               ),
                             ),
                           ),
@@ -168,6 +175,8 @@ class SelectedPlaceScreen extends StatelessWidget {
   }
 }
 
+
+/// FavoriteButton Icon
 class FavoriteButton extends StatefulWidget {
   @override
   _FavoriteButtonState createState() => _FavoriteButtonState();

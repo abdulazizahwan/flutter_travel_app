@@ -27,6 +27,7 @@ dependencies:
   google_fonts: ^2.1.0
   smooth_page_indicator: ^0.2.3
   cached_network_image: ^3.0.0
+  device_preview: ^0.7.3
 
 
   # The following adds the Cupertino Icons font to your application.
