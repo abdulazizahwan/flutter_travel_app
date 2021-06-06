@@ -23,7 +23,6 @@ class _BottomNavigationBarTravelState extends State<BottomNavigationBarTravel> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 86.4,
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
             color: Colors.grey.withOpacity(0.3),
